@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        final int CELL_SIZE = 7;
+        final int cellSize = 7;
 
         Scanner scanner = new Scanner(System.in);
         int row;
@@ -28,7 +28,7 @@ public class Main {
                 System.out.printf("%5s |", tab[i][n]);
             }
             System.out.printf("%n");
-            printLine(column, CELL_SIZE);
+            printLine(column, cellSize);
             System.out.printf("%n");
         }
     }
@@ -45,6 +45,8 @@ public class Main {
         if (row > 100) {
             System.out.println("Podaj liczbę mniejszą od 100");
             return true;
-        } else return false;
+        } else {
+            return false;
+        }
     }
 }
