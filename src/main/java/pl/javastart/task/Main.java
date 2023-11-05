@@ -3,9 +3,10 @@ package pl.javastart.task;
 import java.util.Scanner;
 
 public class Main {
+    static final int CELL_SIZE = 7;
 
     public static void main(String[] args) {
-        final int cellSize = 7;
+
 
         Scanner scanner = new Scanner(System.in);
         int row;
@@ -28,17 +29,17 @@ public class Main {
                 System.out.printf("%5s |", tab[i][n]);
             }
             System.out.printf("%n");
-            printLine(column, cellSize);
+            printLine(column, CELL_SIZE);
             System.out.printf("%n");
         }
     }
 
-    private static void printLine(int column, int cellSize) {
+    private static void printLine(int column, int CELL_SIZE) {
         int j = 0;
         do {
             System.out.print("_");
             j++;
-        } while (j != column * cellSize);
+        } while (j != column * CELL_SIZE);
     }
 
     private static boolean checkNumber(int row) {
